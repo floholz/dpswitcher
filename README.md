@@ -27,14 +27,33 @@
    cd dpswitch
    ```
 
-2. **Build the application**:
+2. **Build and Install**:
+   You can use the provided `Makefile` to build and install the application as a systemd user service.
+
    ```bash
-   go build -o dpswitch main.go
+   make install
    ```
 
-3. **Run the application**:
+   This will:
+   - Build the binary.
+   - Install it to `~/.local/bin/`.
+   - Setup a systemd user service in `~/.config/systemd/user/dpswitch.service`.
+   - Enable the service.
+
+3. **Start the service**:
    ```bash
-   ./dpswitch
+   systemctl --user start dpswitch.service
+   ```
+
+   To check the status:
+   ```bash
+   systemctl --user status dpswitch.service
+   ```
+
+4. **Uninstall**:
+   To remove the application and the service:
+   ```bash
+   make uninstall
    ```
 
 ## Usage

@@ -1,0 +1,11 @@
+[Unit]
+Description=dpswitch - Monitor Toggle Tray Application
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/dpswitch
+Restart=on-failure
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=graphical-session.target
