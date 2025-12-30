@@ -1,9 +1,10 @@
 package main
 
 import (
-	"dpswitch/cmd"
 	_ "embed"
 	"time"
+
+	"github.com/floholz/dpswitch/cmd"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"

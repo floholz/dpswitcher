@@ -1,10 +1,11 @@
 package cmd
 
 import (
-	"dpswitch/cmd/display-tools"
 	"log"
 	"os"
 	"os/exec"
+
+	"github.com/floholz/dpswitch/cmd/display-tools"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/driver/desktop"
